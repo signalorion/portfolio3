@@ -1,0 +1,136 @@
+@charset "utf-8";
+
+@font-face {
+    /* NOTOSAN 100*/
+    font-family: NotoSan;
+    font-style: nomal;
+    font-weight: 100;
+    src: url(../fonts/noto_thin.woff) format("woff"),
+        url(../fonts/noto_thin.ttf) format("truetype");
+}
+@font-face {
+    /* NOTOSAN 100*/
+    font-family: NotoSan;
+    font-style: nomal;
+    font-weight: 200;
+    src: url(../fonts/noto_light.woff) format("woff"),
+        url(../fonts/noto_light.ttf) format("truetype");
+}
+
+@font-face {
+    /* NOTOSAN 300*/
+    font-family: NotoSan;
+    font-style: nomal;
+    font-weight: 300;
+    src: url(../fonts/noto_nomal.woff) format("woff"),
+        url(../fonts/noto_nomal.ttf) format("truetype");
+}
+
+@font-face {
+    /* NOTOSAN 400*/
+    font-family: NotoSan;
+    font-style: nomal;
+    font-weight: 400;
+    src: url(../fonts/noto-regular.woff) format("woff"),
+        url(../fonts/noto-regular.ttf) format("truetype");
+}
+
+@font-face {
+    /* NOTOSAN 500*/
+    font-family: NotoSan;
+    font-style: nomal;
+    font-weight: 500;
+    src: url(../fonts/noto_medium.woff) format("woff"),
+        url(../fonts/noto_mediumr.ttf) format("truetype");
+}
+
+@font-face {
+    /* NOTOSAN 700*/
+    font-family: NotoSan;
+    font-style: nomal;
+    font-weight: 700;
+    src: url(../fonts/noto_bold.woff) format("woff"),
+        url(../fonts/noto_bold.ttf) format("truetype");
+}
+
+@font-face {
+    /* NOTOSAN 900*/
+    font-family: NotoSan;
+    font-style: nomal;
+    font-weight: 900;
+    src: url(../fonts/noto_black.woff) format("woff"),
+        url(../fonts/noto_black.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'NotoSan', sans-serif;
+}
+
+/*사진설명필요할경우*/
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+}
+
+.inbox {
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*플롯쓸경우*/
+.clearboth::before {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.clearboth::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+/*비율유지박스 설정*/
+.rbx {
+    position: relative;
+}
+
+.rbx::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.ibx {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}

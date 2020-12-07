@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/*여수시청 스타일시트*/
+
+/*코어스타일시트*/
+@import url(core.css);
+
+
+/*헤더*/
+#navbox {
+    width: 100%;
+    height: 40px;
+    background-color: #5d6f98;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav a {
+    color: white;
+    font-size: 15px;
+}
+
+.lnb_left,
+.lnb_right {
+    display: flex;
+    line-height: 39px;
+}
+
+.lnb_lang {
+    display: none;
+}
+
+
+.lnb_left li {
+    padding: 0 13px;
+    border-right: 1px solid #6e7ea3;
+}
+
+.lnb_right li {
+    padding: 0 20px;
+}
+
+.lang_tab {
+    background-color: #3c4148;
+}
+
+#gnbbox {
+    width: 100%;
+    height: 85px;
+    background-color: white;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb h1 {
+    padding: 10px 0;
+    flex: 3;
+}
+
+.gnb h2 {
+    flex: 1;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 30px;
+}
+
+.gnb h2 img {
+    width: 25px;
+}
+
+.gnb_right {
+    display: flex;
+    line-height: 85px;
+    flex: 10;
+}
+
+.gnb_right a {
+    color: #000000;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.gnb_right li {
+    flex: 1;
+}
+
+/*본문***************************************************/
+
+.mainvisual {
+    background: url(../images/yeosubg.jpg) no-repeat center/cover;
+    width: 100%;
+    height: 85vh;
+}
+
+.mvtop {
+    display: flex;
+}
+
+.weather {
+    display: flex;
+    flex: 4;
+}
+
+.weather img {}
+
+.weather p {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_search select {
+    border: 0;
+    width: 20%;
+}
+
+.main_search input {
+    border: 0;
+    height: 55px;
+    width: 70%;
+    /*    vertical-align: 3px;*/
+}
+
+.main_search img {
+    width: 30px;
+}
+
+.main_search {
+    flex: 5;
+    width: 30vw;
+    height: 63px;
+    border: 2px solid #be3c29;
+    border-radius: 30px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.main_icons {
+    flex: 4;
+}
+
+.sns b {
+    color: #be3c29;
+}
+
+.snslist {
+    display: flex;
+}
+
+.snslist li {
+    width: 38px;
+    height: 38px;
+    margin-right: 5px;
+    border-radius: 50%;
+
+}
+
+.facebook {
+    background: url(../images/ico_set.png) no-repeat;
+    background-position: -293px 0;
+}
+
+.insta {
+    background: url(../images/ico_set.png) no-repeat;
+    background-position: -336px 0;
+}
+
+.blog {
+    background: url(../images/ico_set.png) no-repeat;
+    background-position: -379px 0;
+}
+
+.kakao {
+    background: url(../images/ico_set.png) no-repeat;
+    background-position: -422px 0;
+}
+
+.youtube {
+    background: url(../images/ico_set.png) no-repeat;
+    background-position: -465px 0;
+}

@@ -99,6 +99,7 @@
 
 .mvtop {
     display: flex;
+    height: 10vw;
 }
 
 .weather {
@@ -183,3 +184,215 @@
     background: url(../images/ico_set.png) no-repeat;
     background-position: -465px 0;
 }
+
+/*메인비주얼 중간***********************************/
+.mvmid {
+    display: flex;
+    height: 345px;
+    justify-content: space-between;
+}
+
+.mvmid > * {
+    border-radius: 10px;
+}
+
+.mvmid_popup {
+    background: url(../images/yeosu_popup1.jpg) center/cover;
+    flex-basis: 588px;
+    /*
+    width: 588px;
+    max-height: 100%;
+    max-width: 100%;*/
+}
+
+.mvmid_issue {
+    background-color: #3c4968;
+    flex-basis: 378px;
+}
+
+.mvmid_mayor {
+    background: #3352a4 url(../images/mayor_pic.png);
+    background-size: 230px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    flex-basis: 378px;
+}
+
+/*메인비주얼 아래*/
+
+.mvbottom {
+    border-radius: 10px;
+    margin-top: 25px;
+    height: 142px;
+    background-color: #e5e6f0;
+    display: flex;
+}
+.mvbottom h2{
+    flex-basis: 20%;
+}
+.service_list{
+    flex-basis: 80%;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.service_list li{
+    
+}
+.service_list h6{
+    text-align: center;
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+}
+
+.service_icon{
+    background-color: #fff;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/*메인콘텐츠***************************************/
+.maincontent{
+    margin-top: 80px;
+}
+
+.mctop{
+    display: flex;
+    height: 274px;
+    justify-content: space-between;
+}
+.mctop >div{
+    border-radius: 10px;
+}
+
+/*메인콘텐츠바텀*/
+.mcbottom{
+    display: flex;
+    height: 250px;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.mcbottom >*{
+    border-radius: 10px;
+}
+
+.minwon{
+    background-color: #41478f;
+    flex-basis: 25%;
+}
+
+.minwon_tabs{
+    flex-basis: 72%;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    /*position: relative;*/
+}
+
+.minwon_t_title{
+    display: flex;
+    background-color: #f1f4f6;
+    line-height: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+.minwon_t_title li{
+    flex: 1;
+    text-align: center;
+}
+
+.minwon_t_title a h5{
+    color: #222;
+    font-size: 17px;
+}
+
+.minwon_serv{
+    padding: 50px 20px;
+    
+}
+.minwon_serv .service_icon{
+    background-color: #f2f8fa;
+    width: 80px;
+    height: 80px;
+}
+
+.mws4, .mws3, .mws2{
+    display: none;
+    /*position: absolute;
+    top: 0;*/
+}
+
+
+/*앱과배너*********************************************/
+.mainapps{
+    display: flex;
+    justify-content: space-between;
+}
+.mainapps >div{
+    flex-basis: 48%;
+}
+
+.apps , .banners{
+    display: flex;
+    background-color: #ff0;
+}
+.apps li{
+    
+}
+
+.appimg{
+    width: 45px;
+    height: 45px;
+}
+
+.app1{
+    background:url(../images/app_ico.png);
+}
+
+.app2{
+    background:url(../images/app_ico.png) -147px 0;
+}
+
+.app3{
+    background:url(../images/app_ico.png) -294px 0;
+}
+
+.app4{
+    background:url(../images/app_ico.png) -471px 0;
+}
+
+
+/*여수풍경******************************************/
+.welcomevisual{
+    margin-top: 70px;
+}
+
+.tour_tit{
+    color: #555555;
+    font-weight: normal;
+}
+
+.tour_list{
+    margin-top: 25px;
+    width: 100%;
+    height: 55vh;
+    background: url(../images/n_tour_bg.jpg) center/cover;
+}
+
+.tour_list a{
+    color: #222;
+}
+
+
+
+
+
+
+
+
+
+
+

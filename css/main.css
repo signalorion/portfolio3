@@ -30,7 +30,21 @@
 }
 
 .lnb_lang {
-    display: none;
+    position: absolute;
+    top: 40px;
+    right: -14px;
+    width: 120px;
+    background-color: #15212f;
+    z-index: 2;
+}
+
+.lnb_lang li a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+}
+
+.lnb_lang li {
+    border-bottom: 1px solid #454b50;
 }
 
 
@@ -45,12 +59,19 @@
 
 .lang_tab {
     background-color: #3c4148;
+    position: relative;
+}
+
+.lang_tab img {
+    margin-left: 10px;
+    vertical-align: -1px;
 }
 
 #gnbbox {
     width: 100%;
     height: 85px;
     background-color: white;
+    position: relative;
 }
 
 .gnb {
@@ -75,18 +96,71 @@
 
 .gnb_right {
     display: flex;
-    line-height: 85px;
     flex: 10;
 }
 
-.gnb_right a {
+.gnb_right > li > a {
     color: #000000;
     font-weight: 600;
     font-size: 20px;
+    line-height: 85px;
 }
 
-.gnb_right li {
+.gnb_right > li {
     flex: 1;
+}
+
+.mainmenu {
+    width: 100%;
+    height: 208px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 10;
+    top: 85px;
+    left: 0;
+    display: flex;
+    border-top: 1px solid #dbdbdb;
+}
+
+.mainmenu .menuleft {
+    flex: 1;
+    background-color: #ebedef;
+    border-bottom: 1px solid #dbdbdb;
+    text-align: right;
+    padding: 40px 35px 0 0;
+}
+
+.menutit {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.menutitsub {
+    font-size: 16px;
+    color: #4d4d4d;
+    font-weight: 300;
+}
+
+.mainmenu .menuright {
+    flex: 3;
+    padding: 40px 0 0 35px;
+}
+
+.menubtn {
+    width: 80%;
+}
+
+.menubtn li {
+    float: left;
+    border: 1px solid #dbdbdb;
+    padding: 14px 25px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.menubtn a {
+    color: #222;
 }
 
 /*본문***************************************************/
@@ -99,7 +173,7 @@
 
 .mvtop {
     position: relative;
-    height: 13vw;
+    height: 210px;
 }
 
 .weather {
@@ -121,25 +195,36 @@
     display: flex;
     flex-direction: column;
 }
-.weather p b{
+
+.weather p b {
     color: #375fbc;
     font-size: 25px;
     font-weight: 900;
 }
-.weather p em{
+
+.weather p em {
     font-style: normal;
     font-size: 14px;
 }
-.weather p small{
+
+.weather p small {
     font-size: 16px;
     font-weight: bold;
 }
 
+.main_search a {
+    position: absolute;
+    top: 11px;
+    right: 14px;
+}
 
 
 .main_search select {
     border: 0;
     width: 20%;
+    font-family: NotoSan;
+    font-size: 15px;
+    padding-left: 10px;
 }
 
 .main_search input {
@@ -156,8 +241,8 @@
 .main_search {
     width: 30vw;
     height: 63px;
-    border: 2px solid #be3c29;
-    border-radius: 30px;
+    border: 3px solid #be3c29;
+    border-radius: 70px;
     background-color: white;
     overflow: hidden;
     position: absolute;
@@ -171,12 +256,14 @@
     top: 0;
     right: 0;
 }
-.main_icons img{
+
+.main_icons img {
     position: absolute;
     top: 32px;
     right: 0;
 }
-.main_icons .sns{
+
+.main_icons .sns {
     position: absolute;
     top: 95px;
     right: 0;
@@ -187,7 +274,8 @@
     color: #be3c29;
     font-weight: 900;
 }
-.sns p{
+
+.sns p {
     margin-bottom: 10px;
 }
 
@@ -201,7 +289,8 @@
     margin-right: 5px;
     border-radius: 50%;
 }
-.snslist li a{
+
+.snslist li a {
     display: block;
     width: 100%;
     height: 100%;
@@ -252,23 +341,34 @@
     max-width: 100%;*/
     position: relative;
 }
-.mm_btns{
+
+.mm_btns {
     position: absolute;
     bottom: 0;
     left: 0;
     display: flex;
 }
-.mm_btns li{
+
+.mm_btns li {
     width: 44px;
     height: 38px;
 }
-.mm_pop_prev{
+
+.mm_btns li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.mm_pop_prev {
     background: url(../images/ico_set.png) 0 -50px;
 }
-.mm_pop_now{
+
+.mm_pop_now {
     background: url(../images/ico_set.png) -44px -50px;
 }
-.mm_pop_next{
+
+.mm_pop_next {
     background: url(../images/ico_set.png) -132px -50px;
 }
 
@@ -321,30 +421,33 @@
     text-align: center;
 }
 
-.issueicon img{
+.issueicon img {
     transform: scale(0.8);
 }
 
-.callcenter{
+.callcenter {
     border: 1px solid #505c77;
     width: 100%;
     height: 112px;
     display: flex;
     padding: 12px 0 0 15px;
 }
-.callimg{
+
+.callimg {
     padding-top: 10px;
 }
-.callinfo{
+
+.callinfo {
     padding-left: 16px;
 }
 
-.callinfo em{
+.callinfo em {
     font-style: normal;
     color: #fff;
     font-size: 14px;
 }
-.callinfo big{
+
+.callinfo big {
     font-weight: 900;
     color: #b9c2d8;
     display: block;
@@ -353,7 +456,7 @@
     letter-spacing: -1px;
 }
 
-.callinfo b{
+.callinfo b {
     width: 100%;
     background-color: #fff;
     border-radius: 12px;
@@ -363,7 +466,8 @@
     display: block;
     margin-top: 5px;
 }
-.callinfo b a{
+
+.callinfo b a {
     color: #000;
 }
 
@@ -376,16 +480,18 @@
     flex-basis: 378px;
     padding: 35px 0 0 28px;
 }
-.mayortit{
+
+.mayortit {
     color: #fff;
     margin-bottom: 20px;
 }
-.mayorname{
+
+.mayorname {
     vertical-align: -7px;
     margin: 0 0px 0 5px;
 }
 
-.mayorroom{
+.mayorroom {
     height: 35px;
     width: 176px;
     background-color: #fff;
@@ -394,36 +500,40 @@
     padding-left: 17px;
     font-size: 14px;
 }
-.mayorroom a{
+
+.mayorroom a {
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
     color: #000;
 }
-.mayorarrow{
+
+.mayorarrow {
     background: url(../images/ico_set.png) 0 -132px;
     width: 18px;
     height: 8px;
     margin-top: -3px;
     margin-left: 6px;
 }
-.mayorlist{
-    
-}
-.bbsdot.may{
+
+.mayorlist {}
+
+.bbsdot.may {
     color: #fff;
     font-size: 20px;
     vertical-align: baseline;
 }
-.mayorlist a{
+
+.mayorlist a {
     color: #fff;
     font-size: 15px;
     font-weight: 200;
 }
-.mayorlist li{
+
+.mayorlist li {
     line-height: 1.7;
-    
+
 }
 
 /*메인비주얼 아래*/
@@ -435,21 +545,25 @@
     background-color: #e5e6f0;
     display: flex;
 }
-.servicetop{
+
+.servicetop {
     flex-basis: 18%;
     background: url(../images/serviceimg.png) no-repeat right bottom;
     padding: 25px 10px 0 30px;
 }
+
 .mvbottom h2 {
     font-size: 22px;
     font-weight: 900;
 }
-.mvbottom h2 b{
+
+.mvbottom h2 b {
     display: block;
     color: #3a60bd;
     font-weight: 900;
 }
-.servicepoint{
+
+.servicepoint {
     width: 50px;
     height: 32px;
     background: url(../images/ico_set.png) -61px -123px;
@@ -473,7 +587,8 @@
     font-weight: 400;
     margin-top: 10px;
 }
-.mvbottom .service_list h6{
+
+.mvbottom .service_list h6 {
     font-size: 14px;
     font-weight: 500;
     margin-top: 5px;
@@ -484,41 +599,67 @@
     height: 65px;
     border-radius: 50%;
     margin: 0 auto;
-    background:#fff url(../images/service_ico.png)no-repeat center;
+    background: #fff url(../images/service_ico.png)no-repeat center;
 }
 
-.mvbottom .service_icon.si1{
+.service_icon:hover {
+    animation: serviceicon_effect 0.5s ease;
+}
+
+@keyframes serviceicon_effect {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.mvbottom .service_icon.si1 {
     background-position: -547px 14px;
 }
-.mvbottom .service_icon.si2{
+
+.mvbottom .service_icon.si2 {
     background-position: 10px 14px;
 }
-.mvbottom .service_icon.si3{
+
+.mvbottom .service_icon.si3 {
     background-position: -487px 14px;
 }
-.mvbottom .service_icon.si4{
+
+.mvbottom .service_icon.si4 {
     background-position: -109px 14px;
 }
-.mvbottom .service_icon.si5{
+
+.mvbottom .service_icon.si5 {
     background-position: -172px 14px;
 }
-.mvbottom .service_icon.si6{
+
+.mvbottom .service_icon.si6 {
     background-position: -235px 14px;
 }
-.mvbottom .service_icon.si7{
+
+.mvbottom .service_icon.si7 {
     background-position: -300px 14px;
 }
-.mvbottom .service_icon.si8{
-        background-position: -362px 14px;
+
+.mvbottom .service_icon.si8 {
+    background-position: -362px 14px;
 }
-.mvbottom .service_icon.si9{
+
+.mvbottom .service_icon.si9 {
     background-position: -423px 14px;
 }
 
 
 /*메인콘텐츠***************************************/
 .maincontent {
-    margin-top: 80px;
+    margin-top: 70px;
 }
 
 .mctop {
@@ -589,15 +730,29 @@
     font-weight: 500;
 }
 
+.bbscont_box {
+    width: 100%;
+}
+
 .bbscont {
     margin-top: 30px;
+    width: 100%;
 }
+
+.bbscont a {
+    display: block;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 
 .bbsdot {
     font-size: 30px;
-    line-height: 0;
-    vertical-align: sub;
-    margin-right: 7px;
+    position: absolute;
+    top: -12px;
+    left: 0;
 }
 
 .bbsmore {
@@ -610,7 +765,8 @@
 }
 
 .bbscont li {
-    line-height: 2;
+    width: 100%;
+    height: 32px;
     position: relative;
 }
 
@@ -620,10 +776,15 @@
 
 .bbscont li a {
     color: #222;
+    position: absolute;
+    top: 0;
+    left: 20px;
 }
 
 .bbsdate {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
     color: #797979;
 }
 
@@ -643,12 +804,17 @@
     /*width: 27px;*/
 }
 
-.mcban_btn > * {
+.mcban_btn span {
     display: inline-block;
     width: 8px;
     height: 13px;
-    background-color: lightblue;
     margin-right: 9px;
+}
+
+.mcban_btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .mcban_btn_prev {
@@ -722,7 +888,7 @@
     flex-basis: 24%;
     color: #fff;
     position: relative;
-    padding: 30px 24px;
+    padding: 30px;
 }
 
 .minwon h3 {
@@ -820,7 +986,7 @@
 }
 
 .minwon_serv {
-    padding: 50px 20px;
+    padding: 45px 30px;
 
 }
 
@@ -936,6 +1102,7 @@
     display: block;
     color: #555;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .bannerslide {
@@ -946,6 +1113,12 @@
 .slidebtn li {
     width: 13px;
     height: 13px;
+}
+
+.slidebtn li a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .bannerprev {
@@ -1036,6 +1209,12 @@
     padding-top: 8px;
     display: flex;
     justify-content: space-between;
+}
+
+.circle_num a {
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .cir_left {

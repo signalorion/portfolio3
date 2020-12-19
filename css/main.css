@@ -5,7 +5,20 @@
 /*코어스타일시트*/
 @import url(core.css);
 
-
+.gototop{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: #1c1c1c;
+    color: #fff;
+    font-weight: 800;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 17px;
+    display: block;
+}
 /*헤더*/
 #navbox {
     width: 100%;
@@ -333,7 +346,6 @@
 }
 
 .mvmid_popup {
-    background: url(../images/yeosu_popup1.jpg) center/cover;
     flex-basis: 588px;
     /*
     width: 588px;
@@ -341,12 +353,45 @@
     max-width: 100%;*/
     position: relative;
 }
+.mvmid_list{
+    width: 100%;
+    height: 100%;
+}
+.mvmid_list div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity .5s ease;
+}
+.mvmid_list .mvmidhere{
+    opacity: 1;
+    z-index: 2;
+}
+.mvmid_list div a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.mvmidimg1 {
+    background: url(../images/yeosu_popup1.jpg) center/cover;
+}
+.mvmidimg2 {
+    background: url(../images/yeosu_popup2.jpg) center/cover;
+}
+.mvmidimg3 {
+    background: url(../images/yeosu_popup3.jpg) center/cover;
+}
 
 .mm_btns {
     position: absolute;
     bottom: 0;
     left: 0;
     display: flex;
+    z-index: 3;
 }
 
 .mm_btns li {
@@ -362,6 +407,7 @@
 
 .mm_pop_prev {
     background: url(../images/ico_set.png) 0 -50px;
+    border-bottom-left-radius: 10px;
 }
 
 .mm_pop_now {
@@ -582,7 +628,7 @@
 
 .service_list h6 {
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     color: #222;
     font-weight: 400;
     margin-top: 10px;
@@ -811,7 +857,7 @@
     margin-right: 9px;
 }
 
-.mcban_btn a {
+.mcban_btn span a {
     display: block;
     width: 100%;
     height: 100%;
@@ -819,10 +865,12 @@
 
 .mcban_btn_prev {
     background: url(../images/ico_set.png) -392px -64px;
+
 }
 
 .mcban_btn_stop {
-    background: url(../images/ico_set.png) -409px -64px;
+    background: url(../images/ico_set.png);
+    background-position: -409px -64px;
 }
 
 .mcban_btn_next {
@@ -837,20 +885,83 @@
     position: relative;
 }
 
-.popupimg {
-    background: url(../images/popup1.jpg) center/cover;
-}
-
-.newsimg {
-    background: url(../images/news1.jpg) center/cover;
-    position: relative;
-}
-
 .mcbanner {
     height: 224px;
     width: 100%;
     border-radius: 0 0 10px 10px;
+    position: relative;
 }
+
+.popupimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .5s ease;
+    border-radius: 0 0 10px 10px;
+}
+
+.popupimg a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.pimghere {
+    z-index: 2;
+    opacity: 1;
+}
+
+.popupimg.pimg1 {
+    background: url(../images/popup1.jpg) center/cover;
+}
+
+.popupimg.pimg2 {
+    background: url(../images/popup2.jpg) center/cover;
+}
+
+.popupimg.pimg3 {
+    background: url(../images/popup3.png) center/cover;
+}
+
+.newsimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s ease;
+    border-radius: 0 0 10px 10px;
+}
+.newsimg a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.newsimg.nimghere {
+    z-index: 2;
+    opacity: 1;
+}
+
+.newsimg.nimg1 {
+    background: url(../images/news1.jpg) center/cover;
+
+}
+
+.newsimg.nimg2 {
+    background: url(../images/news2.jpg) center/cover;
+
+}
+
+.newsimg.nimg3 {
+    background: url(../images/news3.jpg) center/cover;
+
+}
+
 
 .newstxt {
     width: 100%;
@@ -1006,13 +1117,6 @@
     height: 51px;
 }
 
-.mws4,
-.mws3,
-.mws2 {
-    display: none;
-    /*position: absolute;
-    top: 0;*/
-}
 
 
 /*앱과배너*********************************************/
@@ -1104,7 +1208,9 @@
     font-size: 14px;
     font-weight: 500;
 }
-
+.banner{
+    
+}
 .bannerslide {
     display: flex;
     margin-top: -8px;
@@ -1158,6 +1264,7 @@
 
 .welcome_pic_box {
     position: relative;
+    width: 100vw;
 }
 
 .welcomecircle {
@@ -1239,8 +1346,11 @@
 .welcome_pic {
     position: absolute;
     top: -140px;
-    left: 47vw;
-    background: url(../images/n_tour_img1.jpg) center/cover;
+    right: 0;
+    background: url(../images/n_tour_img1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 53vw;
     height: 60vh;
     border-radius: 300px 0 0 300px;
